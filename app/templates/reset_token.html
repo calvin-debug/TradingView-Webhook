@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TradingView Webhook | Log in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='stylesheets/home.css') }}"
+    />
+  </head>
+  <body>
+    <p class="title">TradingView <span>Webhook</span></p>
+    <div class="form-container">
+      <div class="form-fields">
+        <h1 class="sign-in">Sign In</h1>
+        <p class="sign-in-subtext">Automate trading with TradingView</p>
+
+        <!-- prettier-ignore -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flash-messages">
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %} {% endwith %}
+        <form class="form" method="POST">
+          {{ form.hidden_tag() }}
+          <div>
+            <label for="password">Password</label>
+            <!-- prettier-ignore -->
+            {% if form.password.errors %} 
+            {{ form.password(class="form-input invalid-input", id="password") }}
+            {% else %}
+            {{ form.password(class="form-input", id="password") }}
+            {% endif %}
+          </div>
+          <div>
+            <label for="confirm_password">Confirm password</label>
+            <!-- prettier-ignore -->
+            {% if form.confirm_password.errors %} 
+            {{ form.confirm_password(class="form-input invalid-input", id="confirm_password") }}
+            {% else %}
+            {{ form.confirm_password(class="form-input", id="confirm_password") }}
+            {% endif %}
+          </div>
+          {{ form.submit(class="form-submit") }}
+        </form>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts/home.js') }}"></script>
+  </body>
+</html>

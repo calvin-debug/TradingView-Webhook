@@ -1,0 +1,143 @@
+/* Thing at the top left */
+.title,
+.title-bottom {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.logo {
+  width: 100%;
+}
+
+.title {
+  color: white;
+  padding-top: 10px;
+  margin-left: 1.5rem;
+  text-align: left;
+}
+
+/* Thing at the top left */
+.title,
+.title-bottom {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.title-bottom {
+  color: hsl(216, 81%, 53%);
+  margin-bottom: 5rem;
+  text-align: right;
+  margin-right: 1.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: hsl(224, 34%, 13%);
+  min-width: 200px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar-item > a {
+  text-decoration: none;
+  color: hsl(225, 12%, 60%);
+}
+
+.sidebar-item > svg {
+  color: hsl(223, 6%, 60%);
+}
+
+.sidebar-item--active,
+.sidebar-item--active > svg,
+.sidebar-item--active > a {
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    background-color: none;
+    width: 100%;
+    height: min-content;
+    min-height: auto;
+  }
+
+  .sidebar-item a {
+    font-size: 1.2rem;
+  }
+
+  .navbar-links div:first-child {
+    margin-top: 1rem;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 160px;
+    height: 100%;
+  }
+
+  .title {
+    padding-top: 5px;
+    margin-left: 20px;
+  }
+
+  .title-bottom {
+    margin-bottom: 5px;
+    margin-left: 40px;
+  }
+}

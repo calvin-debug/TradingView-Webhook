@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+body,
+html {
+  max-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  background-color: hsl(0, 0%, 96%);
+  gap: 5rem;
+
+  /* overflow-y: hidden; */
+}
+
+.user-id {
+  color: hsl(206, 3%, 44%);
+  font-size: 0.9rem;
+}
+
+/* Account form */
+.container {
+  background-color: white;
+  height: min-content;
+  border-radius: 0.35em;
+  border: 1px solid hsl(226, 82%, 87%);
+  position: relative;
+  margin-top: 8rem;
+}
+
+.container-text {
+  position: absolute;
+  top: -2.5rem;
+  font-size: 1.5rem;
+}
+
+/* Form inputs */
+.form {
+  padding: 0 30px;
+}
+
+.form > div {
+  margin-bottom: 1.5rem;
+}
+
+.form > div:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.form > div:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.35em 0.7em;
+  outline: none;
+  border-radius: 0.3em;
+  border: 1px solid hsl(226, 82%, 87%);
+  transition: box-shadow 0.1s;
+}
+
+.form-input:active,
+.form-input:focus {
+  box-shadow: 0 0 5px hsl(216, 81%, 53%);
+  border: 1px solid hsl(216, 81%, 53%);
+}
+
+/* Form submit */
+.form-submit {
+  background-color: hsl(216, 81%, 53%);
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.75em 1em;
+  border-radius: 0.5em;
+  outline: none;
+  border: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.form-submit:hover {
+  box-shadow: 0 0 5px hsl(216, 81%, 53%);
+}
+
+.number-fields {
+  display: flex;
+  gap: 3rem;
+  justify-content: stretch;
+}
+
+.number-fields > div {
+  width: 33.3%;
+}
+
+.form > ul {
+  list-style: none;
+}
+
+.form-email {
+  pointer-events: none;
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(0, 0%, 34%);
+}
+
+.flash-messages {
+  width: 100%;
+  list-style: none;
+  background-color: hsl(350, 100%, 93%);
+  border: 1px solid hsl(350, 100%, 83%);
+  margin-bottom: 1.5rem;
+  padding: 0.75em 1em;
+  border-radius: 0.3em;
+}
+
+.flash-success {
+  background-color: hsl(145, 100%, 93%);
+  border: 1px solid hsl(145, 100%, 83%);
+}
+
+.errors {
+  color: hsl(0, 100%, 37%);
+  font-size: 0.75rem;
+  list-style: none;
+}
+
+@media (max-width: 900px) {
+  * {
+    font-size: 14px;
+  }
+
+  .container {
+    margin: 0 1.5rem;
+    margin-top: 1rem;
+  }
+} ;

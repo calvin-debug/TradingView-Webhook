@@ -1,0 +1,12 @@
+flask~=2.0.1
+gunicorn
+python-binance
+requests
+flask-bcrypt
+flask-sqlalchemy
+wtforms
+wtforms.validators
+flask-login
+cryptography
+datetime
+wtforms[email]

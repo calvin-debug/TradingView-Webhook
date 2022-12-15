@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+body,
+html {
+  max-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  background-color: hsl(0, 0%, 96%);
+  gap: 5rem;
+
+  /* overflow-y: hidden; */
+}
+
+/* Account info container */
+.account-view {
+  display: flex;
+  gap: 5rem;
+  width: 80%;
+  max-width: 1500px;
+  margin-right: 5rem;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+  /* position: relative; */
+}
+
+/* List of open trades */
+.overview-container {
+  flex: 1;
+  min-width: 550px;
+  height: min-content;
+  justify-self: center;
+  /* margin-top: 8rem; */
+  position: relative;
+}
+
+.overview-container--header {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.overview-header-container {
+  position: absolute;
+  top: -4rem;
+}
+
+.overview-container--header-subtext {
+  margin-bottom: 2rem;
+  color: hsl(223, 6%, 60%);
+}
+
+.trade-container {
+  border: 1px solid hsl(226, 82%, 87%);
+  border-radius: 0.35em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* box-shadow: 0 0 3px hsl(216, 75%, 73%); */
+  background-color: hsl(0, 0%, 100%);
+  position: relative;
+}
+
+.open-trade {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid hsl(202, 11%, 81%);
+}
+
+.trade-container > div:last-of-type {
+  border-bottom: none;
+}
+
+.ticker-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ticker-info > span {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.cancel-icon {
+  cursor: pointer;
+}
+
+.entries-middle--small,
+.trade-middle-small {
+  color: hsl(228, 4%, 45%);
+}
+
+.entries-middle--big,
+.trade-middle--big {
+  font-weight: 500;
+}
+
+.trade-balance {
+  font-size: 0.75rem;
+}
+
+/* Trade history */
+.trade-history {
+  max-height: 80%;
+  flex: 1;
+  position: relative;
+}
+
+.fade-date {
+  color: hsl(206, 3%, 44%);
+  border-right: 1px solid hsl(200, 7%, 57%);
+  padding-right: 1rem;
+}
+
+.past-trade {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid hsl(202, 11%, 81%);
+}
+
+.trade-status {
+  padding-left: 1rem;
+}
+
+.history-container {
+  border: 1px solid hsl(226, 82%, 87%);
+  border-radius: 0.35em;
+  display: flex;
+  overflow-y: auto;
+  max-height: 80vh;
+  flex-direction: column;
+  min-width: 550px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.history-container > div:last-of-type {
+  border-bottom: none;
+}
+
+.trade-history-header-container {
+  top: -2rem;
+  position: absolute;
+}
+
+.delete-ticker {
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("/static/icons/cancel_trade.png");
+  background-size: 100% 100%;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media queries */
+@media (max-width: 1500px) {
+  .account-view {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .overview-container {
+    flex: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Account info container */
+  .account-view {
+    display: flex;
+    gap: 5rem;
+    width: 90%;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    margin-right: 0;
+    justify-content: center;
+    align-items: stretch;
+    align-self: center;
+  }
+
+  .overview-container,
+  .history-container {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .ticker-info > span {
+    font-size: 1rem;
+  }
+
+  .ticker-info > img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .open-trade {
+    padding: 0.75rem 1rem;
+  }
+}

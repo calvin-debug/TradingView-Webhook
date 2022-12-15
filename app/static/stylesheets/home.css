@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+body,
+html {
+  max-height: 100%;
+  max-width: 100%;
+
+  /* overflow-y: hidden; */
+}
+
+body {
+  min-width: fit-content;
+}
+
+/* Thing at the top left */
+.title {
+  font-size: 1.5rem;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-weight: 600;
+}
+
+.title > span {
+  color: hsl(216, 81%, 53%);
+  font-size: 1.5rem;
+}
+
+/* Sign in form */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20vh;
+  max-width: 400px;
+  min-width: 250px;
+}
+
+.form-fields {
+  margin: 0 30px;
+}
+
+.sign-in {
+  font-weight: 500;
+  margin-bottom: 0.3em;
+  font-size: 1.5rem;
+}
+
+.sign-in-subtext {
+  color: hsl(0, 0%, 61%);
+  margin-bottom: 2em;
+}
+
+/* Form inputs */
+.form > div {
+  margin-bottom: 1.5rem;
+}
+
+.form > div:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.form > div:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.35em 0.7em;
+  outline: none;
+  border-radius: 0.3em;
+  border: 1px solid hsl(216, 81%, 53%);
+  transition: box-shadow 0.1s;
+}
+
+.form-input:active,
+.form-input:focus {
+  box-shadow: 0 0 5px hsl(216, 81%, 53%);
+}
+
+.form > ul {
+  list-style: none;
+}
+
+.form > label[for="password"] {
+  margin-top: 1.5rem;
+  display: block;
+}
+
+/* Forgot password */
+.password-reset {
+  text-align: end;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.password-reset > a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: hsl(226, 81%, 56%);
+  font-weight: 500;
+}
+
+.password-reset > a:hover,
+.password-reset > a:active {
+  text-decoration: underline;
+}
+
+/* Form submit */
+.form-submit {
+  background-color: hsl(216, 81%, 53%);
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.75em 1em;
+  border-radius: 0.5em;
+  outline: none;
+  border: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.form-submit:hover {
+  box-shadow: 0 0 5px hsl(216, 81%, 53%);
+}
+
+.sign-up,
+.sign-up > a {
+  font-size: 0.75rem;
+}
+
+.sign-up > a {
+  text-decoration: none;
+  color: hsl(226, 81%, 56%);
+  font-weight: 500;
+}
+
+.sign-up > a:active,
+.sign-up > a:focus,
+.sign-up > a:hover {
+  color: hsl(226, 81%, 56%);
+  text-decoration: underline;
+}
+
+.invalid-input {
+  border: 1px solid red;
+}
+
+.invalid-input:focus,
+.invalid-input:active {
+  box-shadow: 0 0 5px hsl(0, 100%, 37%);
+}
+
+.flash-messages {
+  width: 100%;
+  list-style: none;
+  background-color: hsl(350, 100%, 93%);
+  border: 1px solid hsl(350, 100%, 83%);
+  margin-bottom: 1.5rem;
+  padding: 0.75em 1em;
+  border-radius: 0.3em;
+}
+
+.errors {
+  color: hsl(0, 100%, 37%);
+  font-size: 0.75rem;
+  list-style: none;
+}
+
+@media (max-width: 900px) {
+  * {
+    font-size: 14px;
+  }
+}
